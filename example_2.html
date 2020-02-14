@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Test Page</title>
+</head>
+<body>
+  <script>
+    function sum(array) {
+      var index = 1;
+      var sum = array[0];
+      while (index < array.length) {
+        sum += array[index];
+        index ++;
+      }
+      return sum
+    }
+    // console.log(sum([1,2,3,4,5]));
+
+    function smallestString(arrayOfStrings) {
+      var index = 1;
+      var smallestString = arrayOfStrings[0];
+      
+      while (index < arrayOfStrings.length) {
+        if (arrayOfStrings[index].length < smallestString.length) {
+          smallestString = arrayOfStrings[index]
+        };
+      index ++;
+      }
+      return smallestString
+    }
+
+    // console.log(smallestString(["apple", "orange", "fig", "watermelon"]));
+
+    function reverse(arrayOfNumbers) {
+      var index = arrayOfNumbers.length - 1;
+      var newArray = [];
+      while (index >= 0) {
+        newArray.push(arrayOfNumbers[index]);
+        index --;
+      }
+      return newArray;
+    }
+
+    // console.log(reverse([1,2,5,6,9]));
+
+    function findingA(arrayOfStrings) {
+      var count = 0;
+      arrayOfStrings.forEach(function(string) {
+        if (string[0] === "a") {
+          count++;
+        }
+      });
+      return count;
+    }
+
+    // console.log(findingA(["apple", "pineapple", "ardvark", "bob", "charlie"]));
+
+    function combiner(arrayOfStrings) {
+      var totalString = [];
+      arrayOfStrings.forEach(function(string) {
+        totalString.push(string);
+      });
+      return totalString.toString();
+    }
+
+    // console.log(combiner(["yes", "no", "hello", "goodbye"]));
+
+    function productOfNumbers(arrayOfNumbers) {
+      var index = 0;
+      var product = arrayOfNumbers[0];
+      while (index < arrayOfNumbers.length) {
+        product *= arrayOfNumbers[index];
+        index ++;
+      }
+      return product;
+    }
+
+    // console.log(productOfNumbers([1,2,3,4,5]));
+
+    function smallestTwoNumbers(arrayOfNumbers) {
+      var newArray = [];
+      var newArray2 = [];
+      var smallestNumber = arrayOfNumbers[0];
+      arrayOfNumbers.forEach(function(number) {
+        if (number > smallestNumber) {
+          newArray.push(number);
+        } else if (number < smallestNumber) {
+          newArray2.push(number);
+        }
+      });
+      return newArray2;
+    }
+
+    console.log(smallestTwoNumbers([1,5,6,7,2,9,10]));
+  </script>
+</body>
+</html>
